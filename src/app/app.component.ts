@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'memory-game-angular';
+
+  public pokemonTeam: Array<any> = [];
+
+  public retrieveData($event: any): void {
+    console.log($event);
+    this.pokemonTeam = $event;
+  }
 }
