@@ -1,0 +1,4 @@
+<div>
+  <app-menu *ngIf="this.pokemonTeam.length == 0" (myData)="retrieveData($event)"></app-menu>
+  <app-board *ngIf="this.pokemonTeam.length != 0" (myData)="retrieveData($event)" [team]="this.pokemonTeam"></app-board>
+</div>
