@@ -3,8 +3,10 @@
 		<div class="tp-box__side tp-box__front d-flex justify-center items-center bg-purple-400 rounded-md border-2 border-purple-400 transition transform ease-in-out duration-300 hover:scale-105 hover:shadow-md hover:shadow-purple-400">
             <img src="https://cdn-icons-png.flaticon.com/512/1068/1068729.png" class="mx-auto mt-10 h-1/2 opacity-20"/>
 		</div>
-		<div [@theChildAnimation]="flip" class="tp-box__side tp-box__back d-flex justify-center items-center rounded-md transition transform ease-in-out duration-300 hover:scale-105">
-            <img class="mx-auto mt-10 bg-white rounded-lg" [src]="pokemon.sprites.front_default" alt="pokemon image" />
+		<div [@theChildAnimation]="flip" class="tp-box__side tp-box__back rounded-md transition transform ease-in-out duration-300 hover:scale-105 p-2">
+			<div class="bg-white flex h-full justify-center items-center rounded-sm">
+				<img class="mx-auto bg-white rounded-lg" [src]="pokemon.sprites.other.home.front_default" alt="pokemon image" />
+			</div>
 		</div>
         
 	</div>

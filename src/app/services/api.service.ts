@@ -21,7 +21,7 @@ export class ApiService {
   public async getRandomPokemons(): Promise<any> {
     let pokemonList : Array<any> = [];
     for (let i = 0; i < 10; i++) {
-      let id : Number = Math.floor(Math.random() * 1000 + 1);
+      let id : Number = Math.floor(Math.random() * 905 + 1);
       await this.axiosClient.get(`https://pokeapi.co/api/v2/pokemon/${id}`).then((response) => {
         pokemonList.push(response.data);
       });
