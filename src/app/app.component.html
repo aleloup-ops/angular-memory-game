@@ -1,4 +1,10 @@
 <div>
+  <button
+    class="absolute top-10 left-10 rounded-md shadow-md dark:shadow-none bg-white dark:bg-gray-700 p-2"
+    (click)="toggleDarkMode()"
+  >
+    <img class="h-8 w-8" [src]="this.darkThemeIcon"/>
+  </button>
   <app-menu *ngIf="this.pokemonTeam.length == 0" (myData)="retrieveData($event)"></app-menu>
   <app-board *ngIf="this.pokemonTeam.length != 0" (myData)="retrieveData($event)" [team]="this.pokemonTeam"></app-board>
 </div>

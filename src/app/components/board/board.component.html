@@ -5,13 +5,13 @@
 
 </div>
 <div class="bg-black bg-opacity-60 absolute top-0 h-full w-full" *ngIf="!this.positions.includes('inactive') && !this.positions.includes('active')">
-    <div class="container mx-auto flex flex-col justify-center items-center mt-14 p-48 bg-white rounded-lg">
+    <div class="container mx-auto flex flex-col justify-center items-center mt-14 p-48 bg-white dark:bg-gray-700 rounded-lg">
         <p class="text-8xl text-center text-transparent font-bold bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 background-animate">Congrats ! You won the battle !</p>
         <button type="button"
         class="mt-20 rounded-lg font-bold bg-gradient-to-r from-purple-400 to-pink-600 px-6 py-2 text-xl text-white transition transform duration-300 ease-in-out hover:scale-110"
         (click)="this.resetGame()"
     >
-        Let's go !
+        Let's battle again !
     </button>
     </div>
 </div>

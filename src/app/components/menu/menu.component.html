@@ -1,21 +1,21 @@
 <div class="container mx-auto flex flex-col justify-center items-center mt-24">
     <h1 class="row text-8xl text-center text-transparent font-bold bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 background-animate">Memory Game</h1>
-    <div class="mt-14">
+    <div class="mt-8">
         <div *ngIf="this.loading" class="flex flex-row items-center mt-36">
-            <p class="text-3xl font-semibold">Loading...</p>
+            <p class="text-3xl dark:text-white font-semibold">Loading...</p>
             <img id="loading_icon" class="h-24 w-24 ml-8" src="https://img.icons8.com/bubbles/512/pokeball.png" alt="pokeball"/>
         </div>
         <div *ngIf="!this.loading" class="flex flex-col justify-center items-center">
-            <h2 class="font-bold text-2xl text-center">Pick 6 Pokemons for this adventure !</h2>
+            <h2 class="font-bold text-2xl text-center dark:text-white">Pick 6 Pokemons for this adventure !</h2>
             <div class="border-1 grid grid-cols-2 gap-2 md:grid-cols-5 md:gap-5 mt-10">
                 <button
                     *ngFor="let pokemon of this.pokemonList"
                     [ngClass]="{checkedPokemon: pokemon.checked == true}"
-                    class="p-1 bg-gray-400 rounded-md transition transform duration-300 ease-in-out hover:scale-110"
+                    class="p-2 bg-gray-700 dark:bg-white rounded-md transition transform duration-300 ease-in-out hover:scale-105"
                     (click)="this.editList(pokemon);"
                 >
-                    <div class="p-4 bg-white rounded-sm">
-                        <h1 class="text-center font-semibold">{{pokemon.species.name.charAt(0).toUpperCase() + pokemon.species.name.slice(1)}}</h1>
+                    <div class="p-4 bg-white dark:bg-gray-700 rounded-sm">
+                        <h1 class="text-center font-semibold dark:text-white">{{pokemon.species.name.charAt(0).toUpperCase() + pokemon.species.name.slice(1)}}</h1>
                         <img class="h-28 w-28" [src]="pokemon.sprites.other.home.front_default" alt="pokemon image" />
                     </div>
                 </button>               
